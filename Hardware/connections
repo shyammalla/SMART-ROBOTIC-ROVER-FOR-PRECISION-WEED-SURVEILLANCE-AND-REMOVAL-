@@ -1,0 +1,35 @@
+ Power Section
+Battery (7–12V) → L298N (12V)
+Battery → Buck Converter → 5V output
+5V → ESP32-CAM, Servo, Relay
+ All GND common
+
+ L298N Motor Driver
+Motors
+OUT1, OUT2 → Right Motors
+OUT3, OUT4 → Left Motors
+Control (ESP32 → L298N)
+IN1 → GPIO12
+IN2 → GPIO13
+IN3 → GPIO1
+IN4 → GPIO3
+
+ Servo Motors
+PAN Servo → GPIO14
+TILT Servo → GPIO15
+VCC → 5V
+GND → GND
+
+Cutter Motor (Relay)
+Relay Control
+IN →  GPIO2
+VCC → 5V
+GND → GND
+Relay Output
+COM → Battery +
+NO → Cutter Motor +
+Motor – → GND
+  
+ Light
+LED + → GPIO4
+LED – → GND (with resistor)
